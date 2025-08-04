@@ -1,66 +1,88 @@
-# 📊 Informe Final - Análisis de Evasión de Clientes (Churn) - TelecomX
+# 📊 Análisis de Evasión de Clientes (Churn) - TelecomX
 
-## 🔹 Introducción
-
-El presente análisis tiene como objetivo comprender los factores que contribuyen a la evasión de clientes (churn) en la empresa ficticia **TelecomX**, dedicada a ofrecer servicios de telefonía, internet y televisión. La retención de clientes es uno de los pilares del crecimiento sostenible de una empresa. Por ello, identificar patrones de comportamiento de los clientes que abandonan el servicio es crucial para diseñar estrategias efectivas de fidelización.
-
----
-
-## 🔹 Limpieza y Tratamiento de Datos
-
-Para garantizar la calidad de los análisis, se realizaron los siguientes pasos:
-
-- 📁 Importación de datos desde el repositorio oficial del desafío.
-- 🔍 Revisión de tipos de datos y nombres de columnas.
-- 🧹 Estandarización de nombres de columnas para facilitar su uso en el código.
-- 🔄 Conversión de la variable `Churn` a formato binario (`0` para clientes activos y `1` para clientes que abandonaron).
-- 🧽 Eliminación de columnas irrelevantes o con datos inconsistentes si fue necesario.
-- 💡 Conversión de columnas numéricas con formato de texto a tipo `float`, como `account_Charges_Total`.
+¡Bienvenido a este proyecto de ciencia de datos enfocado en la **retención de clientes** en el sector de telecomunicaciones!  
+Aquí analizamos los datos de la empresa ficticia **TelecomX** para identificar patrones y factores que influyen en la cancelación del servicio por parte de los clientes (churn).
 
 ---
 
-## 🔹 Análisis Exploratorio de Datos (AED)
+## 🚀 Objetivo
 
-### ✅ Estadísticas descriptivas
+Comprender las causas detrás de la **evasión de clientes** y generar **insights accionables** que permitan:
 
-Se usó `df.describe()` para comprender el rango, media, desviación estándar y valores extremos de las variables numéricas. Esto ayudó a identificar posibles outliers y entender el perfil promedio del cliente.
-
-### ✅ Distribución de la variable objetivo `Churn`
-
-Se realizó un gráfico de barras para visualizar cuántos clientes permanecieron (`No`) y cuántos se dieron de baja (`Sí`). Este gráfico reveló el desbalance de clases en los datos (más clientes permanecen que los que cancelan).
-
-### ✅ Análisis de correlaciones y visualizaciones
-
-- Se analizaron variables como:
-  - **Tenencia del cliente (`customer_tenure`)**
-  - **Tipo de contrato (`account_Contract`)**
-  - **Servicios adicionales (seguridad, respaldo, soporte técnico)**
-  - **Método de pago (`account_PaymentMethod`)**
-- Se utilizaron gráficos de barras, histogramas y heatmaps para entender cómo estas variables se relacionan con el churn.
+- Mejorar la fidelización.
+- Reducir el churn.
+- Diseñar estrategias comerciales basadas en datos.
 
 ---
 
-## 🔹 Conclusiones e Insights
+## 🧠 Herramientas utilizadas
 
-📌 Entre los hallazgos más relevantes:
-
-- Los clientes con contrato **mensual** presentaron una **tasa de evasión significativamente mayor** que aquellos con contratos anuales o por dos años.
-- La mayoría de los clientes que abandonan **no cuentan con servicios adicionales** como respaldo en línea o soporte técnico.
-- Los clientes con cargos mensuales más altos tienen una **mayor probabilidad de evasión**, especialmente si su permanencia es menor a un año.
-- El método de pago también influye: clientes que pagan con tarjetas virtuales o medios electrónicos tienen una tasa de churn más elevada.
-
----
-
-## 🔹 Recomendaciones
-
-Con base en los análisis anteriores, se proponen las siguientes estrategias:
-
-1. **Incentivar contratos a largo plazo** mediante descuentos o beneficios exclusivos.
-2. **Promover la activación de servicios adicionales**, como soporte técnico y respaldo, destacando su valor en la experiencia del cliente.
-3. **Revisar las tarifas mensuales** y ofrecer planes más flexibles para clientes con cargos elevados.
-4. **Segmentar campañas de retención** enfocadas en clientes con menos de 6 meses de antigüedad.
-5. **Optimizar métodos de pago** para hacerlos más amigables, seguros y confiables, promoviendo los que tienen mejor tasa de retención.
+- Python 🐍
+- Google Colab
+- Pandas, Numpy
+- Seaborn, Matplotlib, Plotly
+- Visualizaciones interactivas
+- GitHub para control de versiones
 
 ---
 
-📌 Este análisis es solo el punto de partida. Un estudio más profundo con técnicas de Machine Learning podría prever el churn antes de que ocurra, permitiendo una acción proactiva por parte de TelecomX.
+## 🧹 Proceso de análisis
+
+1. **Importación y limpieza de datos**  
+   Estandarizamos, transformamos y analizamos los datos para facilitar su exploración.
+
+2. **Análisis Exploratorio de Datos (EDA)**  
+   Utilizamos gráficos, estadísticas y correlaciones para entender el comportamiento de los clientes que cancelan.
+
+3. **Insights y conclusiones**  
+   Detectamos factores de riesgo clave como tipo de contrato, método de pago, servicios adicionales, etc.
+
+4. **Recomendaciones**  
+   Propuestas estratégicas para mejorar la retención de clientes.
+
+---
+
+## 📎 Archivos del repositorio
+
+| Archivo | Descripción |
+|--------|-------------|
+| `telecomx_churn_analysis.ipynb` | Notebook con todo el análisis paso a paso |
+| `README.md` | Este archivo con la documentación del proyecto |
+| `data/` | Carpeta sugerida para incluir datasets si se quiere replicar localmente (no incluida por defecto) |
+
+---
+
+## 📌 Resultados destacados
+
+- Clientes con **contratos mensuales** son más propensos al churn.
+- **Baja adopción de servicios adicionales** se asocia con mayor tasa de cancelación.
+- El **método de pago electrónico** también influye negativamente en la retención.
+- Los **clientes recientes** (menos de 6 meses) presentan una tasa de churn mayor.
+
+---
+
+## 🧭 Recomendaciones
+
+🔹 Incentivar contratos largos con beneficios atractivos.  
+🔹 Promover activación de servicios complementarios.  
+🔹 Ajustar estrategias según método de pago y antigüedad.  
+🔹 Monitoreo continuo de clientes con cargos altos.  
+
+---
+
+## 💡 Próximos pasos
+
+- Aplicar modelos de **machine learning** para predecir la evasión antes de que ocurra.
+- Desplegar dashboards interactivos con herramientas como **Streamlit** o **Tableau**.
+
+---
+
+## 🤝 Autor
+
+Proyecto desarrollado por Thais Trillanes como parte de su formación en Ciencia de Datos con Alura LATAM 🚀.
+
+---
+
+## ⭐ ¡Dale una estrella si te sirvió!
+
+Si este proyecto te ayudó o inspiró, considera darle ⭐ en la parte superior del repositorio.
